@@ -40,59 +40,40 @@ int main(int argc, char **argv)
 		curr = curr->next;
 		d++;
 	}
-	swap_a(stacks, 1);
-	ft_printf("-----------------------------------\n");
-	curr = stacks->a;
-	d = 1;
-	while (curr && d)
-	{
-		ft_printf("val: %d index: %d sira: %d\n", curr->val, curr->index, d);
-		curr = curr->next;
-		d++;
-	}
 	push_b(stacks);
-	ft_printf("-----------------------------------\n");
-	d = 1;
-	curr = stacks->b;
-	while (curr && d)
-	{
-		ft_printf("val: %d index: %d sira: %d\n", curr->val, curr->index, d);
-		curr = curr->next;
-		d++;
-	}
-	ft_printf("-----------------------------------\n");
-	d = 1;
-	curr = stacks->a;
-	while (curr && d)
-	{
-		ft_printf("val: %d index: %d sira: %d\n", curr->val, curr->index, d);
-		curr = curr->next;
-		d++;
-	}
 	push_b(stacks);
-	ft_printf("-----------------------------------\n");
+	push_b(stacks);
+	ft_printf("--------------------------\n");
+	curr = stacks->a;
 	d = 1;
+	while (curr && d)
+	{
+		ft_printf("val: %d index: %d sira: %d\n", curr->val, curr->index, d);
+		curr = curr->next;
+		d++;
+	}
+	ft_printf("--------------------------\n");
 	curr = stacks->b;
+	d = 1;
 	while (curr && d)
 	{
 		ft_printf("val: %d index: %d sira: %d\n", curr->val, curr->index, d);
 		curr = curr->next;
 		d++;
 	}
-	ft_printf("-----------------------------------\n");
-		d = 1;
+	rotate_tog(stacks);
+	ft_printf("--------------------------\n");
 	curr = stacks->a;
+	d = 1;
 	while (curr && d)
 	{
 		ft_printf("val: %d index: %d sira: %d\n", curr->val, curr->index, d);
 		curr = curr->next;
 		d++;
 	}
-	push_a(stacks);
-	push_a(stacks);
-		ft_printf("-----------------------------------\n");
-		d = 1;
-	curr = stacks->a;
+	ft_printf("--------------------------\n");
+	curr = stacks->b;
+	d = 1;
 	while (curr && d)
 	{
 		ft_printf("val: %d index: %d sira: %d\n", curr->val, curr->index, d);

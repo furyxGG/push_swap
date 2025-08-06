@@ -29,5 +29,7 @@ void	swap_tog(t_stacks *stacks);
 void	push_b(t_stacks *stacks);
 void	push_a(t_stacks *stacks);
 
-
+void	rotate_a(t_stacks *stacks, int w);
+void	rotate_b(t_stacks *stacks, int w);
+void	rotate_tog(t_stacks *stacks);
 #endif
