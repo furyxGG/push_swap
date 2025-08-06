@@ -13,8 +13,15 @@
 #ifndef RULES_H
 # define RULES_H
 
-# include "../src/push_swap.h"
+# include "../ft_printf/ft_printf.h"
+# include "../libft/libft.h"
 
+typedef struct s_stacks
+{
+	t_list	*a;
+	t_list	*b;
+}				t_stacks;
 
+void	swap_a(t_stacks *stacks);
 
 #endif

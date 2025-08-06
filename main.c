@@ -33,9 +33,21 @@ int main(int argc, char **argv)
 	stack_index(stacks);
 
 	t_list *curr = stacks->a;
-	while (curr)
+	int d = 1;
+	while (curr && d)
 	{
-		ft_printf("val: %d index: %d\n", curr->val, curr->index);
+		ft_printf("val: %d index: %d sira: %d\n", curr->val, curr->index, d);
 		curr = curr->next;
+		d++;
+	}
+	swap_a(stacks);
+	printf("-----------------------------------");
+	curr = stacks->a;
+	d = 1;
+	while (curr && d)
+	{
+		ft_printf("val: %d index: %d sira: %d\n", curr->val, curr->index, d);
+		curr = curr->next;
+		d++;
 	}
 }

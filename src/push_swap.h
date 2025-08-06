@@ -15,12 +15,7 @@
 
 # include "../ft_printf/ft_printf.h"
 # include "../libft/libft.h"
-
-typedef struct s_stacks
-{
-	t_list	*a;
-	t_list	*b;
-}				t_stacks;
+# include "../rules/rules.h"
 
 int			check_for_words(char **lists);
 int			check_for_double(char **lists);
