@@ -5,7 +5,8 @@ CFLAGS		=	-Wall -Werror -Wextra
 
 SRCS 		=	swap.c \
 				push.c \
-				rotate.c
+				rotate.c \
+				reverserotate.c
 
 OBJS		=	$(SRCS:.c=.o)
 

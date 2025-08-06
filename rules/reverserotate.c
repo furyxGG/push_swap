@@ -1,52 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   reverserotate.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fyagbasa <fyagbasa@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/06 16:39:55 by fyagbasa          #+#    #+#             */
-/*   Updated: 2025/08/06 16:39:55 by fyagbasa         ###   ########.fr       */
+/*   Created: 2025/08/06 17:34:30 by fyagbasa          #+#    #+#             */
+/*   Updated: 2025/08/06 17:34:30 by fyagbasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rules.h"
 
-void	rotate_a(t_stacks *stacks, int w)
+static void	nullast(t_list *stack)
+{
+	while (stack && stack->next && stack->next->next)
+		stack = stack->next;
+	stack->next = NULL;
+}
+
+void	reverse_a(t_stacks *stacks, int w)
 {
 	t_list	*tmp;
-	t_list	*last;
-
+	
 	if (!stacks->a || !stacks->a->next)
 		return ;
-	last = ft_lstlast(stacks->a);
-	tmp = stacks->a;
-	stacks->a = stacks->a->next;
-	last->next = tmp;
-	tmp->next = NULL;
+	tmp = ft_lstlast(stacks->a);
+	nullast(stacks->a);
+	ft_lstadd_front(&stacks->a, tmp);
 	if (w)
-		ft_printf("ra\n");
+		ft_printf("rra\n");
 }
 
-void	rotate_b(t_stacks *stacks, int w)
+void	reverse_b(t_stacks *stacks, int w)
 {
 	t_list	*tmp;
-	t_list	*last;
-
+	
 	if (!stacks->b || !stacks->b->next)
 		return ;
-	last = ft_lstlast(stacks->b);
-	tmp = stacks->b;
-	stacks->b = stacks->b->next;
-	last->next = tmp;
-	tmp->next = NULL;
+	tmp = ft_lstlast(stacks->b);
+	nullast(stacks->b);
+	ft_lstadd_front(&stacks->b, tmp);
 	if (w)
-		ft_printf("rb\n");
+		ft_printf("rrb\n");
 }
 
-void	rotate_tog(t_stacks *stacks)
+void	reverse_tog(t_stacks *stacks)
 {
-	rotate_a(stacks, 0);
-	rotate_b(stacks, 0);
-	ft_printf("rr\n");
+	reverse_a(stacks, 0);
+	reverse_b(stacks, 0);
+	ft_printf("rrr\n");
 }

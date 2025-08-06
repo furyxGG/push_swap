@@ -40,39 +40,9 @@ int main(int argc, char **argv)
 		curr = curr->next;
 		d++;
 	}
-	push_b(stacks);
-	push_b(stacks);
-	push_b(stacks);
-	ft_printf("--------------------------\n");
+	reverse_a(stacks, 1);
+	ft_printf("-------------------------");
 	curr = stacks->a;
-	d = 1;
-	while (curr && d)
-	{
-		ft_printf("val: %d index: %d sira: %d\n", curr->val, curr->index, d);
-		curr = curr->next;
-		d++;
-	}
-	ft_printf("--------------------------\n");
-	curr = stacks->b;
-	d = 1;
-	while (curr && d)
-	{
-		ft_printf("val: %d index: %d sira: %d\n", curr->val, curr->index, d);
-		curr = curr->next;
-		d++;
-	}
-	rotate_tog(stacks);
-	ft_printf("--------------------------\n");
-	curr = stacks->a;
-	d = 1;
-	while (curr && d)
-	{
-		ft_printf("val: %d index: %d sira: %d\n", curr->val, curr->index, d);
-		curr = curr->next;
-		d++;
-	}
-	ft_printf("--------------------------\n");
-	curr = stacks->b;
 	d = 1;
 	while (curr && d)
 	{
