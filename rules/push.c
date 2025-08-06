@@ -1,21 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fyagbasa <fyagbasa@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/11 06:38:31 by fyagbasa          #+#    #+#             */
-/*   Updated: 2025/08/06 16:37:27 by fyagbasa         ###   ########.fr       */
+/*   Created: 2025/08/06 16:08:41 by fyagbasa          #+#    #+#             */
+/*   Updated: 2025/08/06 16:08:41 by fyagbasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "rules.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	push_b(t_stacks *stacks)
 {
-	if (!lst || !new)
+	t_list	*tmp;
+
+	if (!stacks->a)
 		return ;
-	new->next = *lst;
-	*lst = new;
+	tmp = stacks->a->next;
+    ft_lstadd_front(&stacks->b, stacks->a);
+    stacks->a = tmp;
+	ft_printf("pb\n");
+}
+
+void	push_a(t_stacks *stacks)
+{
+	t_list	*tmp;
+
+	if (!stacks->b)
+		return ;
+    tmp = stacks->b->next;
+    ft_lstadd_front(&stacks->a, stacks->b);
+    stacks->b = tmp;
+	ft_printf("pa\n");
 }

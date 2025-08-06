@@ -3,7 +3,8 @@ NAME		=		rules.a
 CC			=		cc
 CFLAGS		=	-Wall -Werror -Wextra
 
-SRCS 		=	swap.c
+SRCS 		=	swap.c \
+				push.c
 
 OBJS		=	$(SRCS:.c=.o)
 

@@ -22,6 +22,12 @@ typedef struct s_stacks
 	t_list	*b;
 }				t_stacks;
 
-void	swap_a(t_stacks *stacks);
+void	swap_a(t_stacks *stacks, int w);
+void	swap_b(t_stacks *stacks, int w);
+void	swap_tog(t_stacks *stacks);
+
+void	push_b(t_stacks *stacks);
+void	push_a(t_stacks *stacks);
+
 
 #endif

@@ -22,7 +22,7 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS) $(PRINTF) $(LIBFT) $(RULES) $(SRC)
-	$(CC) $(CFLAGS) $(OBJS) $(SRC) $(PRINTF) $(LIBFT) $(RULES) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) $(SRC) $(RULES) $(PRINTF) $(LIBFT) -o $(NAME)
 
 $(PRINTF):
 	make -C $(PRINTFD) all
