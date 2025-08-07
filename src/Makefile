@@ -7,7 +7,8 @@ SRCS 		=	check_argums.c \
 				create_stacks.c \
 				index_stacks.c \
 				sort_small.c \
-				sort.c
+				sort.c \
+				move.c
 
 OBJS		=	$(SRCS:.c=.o)
 

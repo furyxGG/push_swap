@@ -23,4 +23,7 @@ void	sort(t_stacks *stacks)
 		sort_three(stacks);
 	else if (size == 4 || size == 5)
 		sort_four_five(stacks);
+	else if (size >= 6 && size <= 100)
+		radix_sort(stacks);
+	
 }

@@ -41,19 +41,16 @@ void	sort_three(t_stacks *stacks)
 		rotate_a(stacks, 1);
 }
 
-// void	sort_four_five(t_stacks *stacks)
-// {
-// 	t_list	*tmp;
-
-// 	while (ft_lstsize(stacks->a) > 3)
-// 	{
-
-// 	}
-// 	sort_three(stacks);
-// 	tmp = stacks->b;
-// 	while (tmp)
-// 	{
-// 		push_a(stacks);
-// 		tmp = tmp->next;
-// 	}
-// }
+void	sort_four_five(t_stacks *stacks)
+{
+	while (ft_lstsize(stacks->a) > 3)
+	{
+		move_min_top(stacks);
+		push_b(stacks);
+	}
+	sort_three(stacks);
+	while (ft_lstsize(stacks->b) > 0)
+	{
+		push_a(stacks);
+	}
+}
