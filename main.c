@@ -40,8 +40,7 @@ int main(int argc, char **argv)
 		curr = curr->next;
 		d++;
 	}
-	reverse_a(stacks, 1);
-	ft_printf("-------------------------");
+	sort(stacks);
 	curr = stacks->a;
 	d = 1;
 	while (curr && d)

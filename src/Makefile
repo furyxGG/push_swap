@@ -5,7 +5,9 @@ CFLAGS		=	-Wall -Werror -Wextra
 
 SRCS 		=	check_argums.c \
 				create_stacks.c \
-				index_stacks.c
+				index_stacks.c \
+				sort_small.c \
+				sort.c
 
 OBJS		=	$(SRCS:.c=.o)
 
