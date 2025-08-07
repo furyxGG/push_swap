@@ -8,7 +8,9 @@ SRCS 		=	check_argums.c \
 				index_stacks.c \
 				sort_small.c \
 				sort.c \
-				move.c
+				move.c \
+				turk_algorithm.c \
+				calculatecost.c
 
 OBJS		=	$(SRCS:.c=.o)
 

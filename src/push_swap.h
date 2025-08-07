@@ -35,4 +35,7 @@ void	    sort(t_stacks *stacks);
 
 void        move_min_top(t_stacks *stacks);
 
+int         calc_rot_cost(int pos, int size);
+
+
 #endif

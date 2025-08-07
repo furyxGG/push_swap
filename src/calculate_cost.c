@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort.c                                             :+:      :+:    :+:   */
+/*   calculate_cost.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fyagbasa <fyagbasa@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/06 18:13:43 by fyagbasa          #+#    #+#             */
-/*   Updated: 2025/08/06 18:13:43 by fyagbasa         ###   ########.fr       */
+/*   Created: 2025/08/07 17:10:41 by fyagbasa          #+#    #+#             */
+/*   Updated: 2025/08/07 17:10:41 by fyagbasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort(t_stacks *stacks)
+int	calc_rot_cost(int pos, int size)
 {
-	int	size;
-
-	size = ft_lstsize(stacks->a);
-	if (size == 2)
-		sort_two(stacks);
-	else if (size == 3)
-		sort_three(stacks);
-	else if (size == 4 || size == 5)
-		sort_four_five(stacks);
+	if (pos <= size / 2)
+		return (pos);
+	return (size - pos);
 }
+
