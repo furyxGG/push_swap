@@ -12,6 +12,23 @@
 
 #include "turk.h"
 
+int	get_pos(t_list *list, int index)
+{
+	int 	pos;
+	t_list	*tmp;
+
+	tmp = list;
+	pos = 0;
+	while (tmp)
+	{
+		if (tmp->index == index)
+			return (pos);
+		pos++;
+		tmp = tmp->next;
+	}
+	return (-42);
+}
+
 static int	no_any_small_b(t_stacks *stacks)
 {
 	t_list *tmp;
@@ -103,12 +120,3 @@ int	get_target_in_a(t_stacks *stacks, int index)
 		target_pos = no_any_big_a(stacks);
 	return (target_pos);
 }
-
-// int	calc_to_send_b(t_stacks *stacks)
-// {
-// 	int	cost;
-// 	int	pos_a;
-// 	int	pos_b;
-
-// 	cost = 0;
-// }

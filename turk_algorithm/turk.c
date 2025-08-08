@@ -18,5 +18,5 @@ void	turk(t_stacks *stacks)
 	push_b(stacks);
 	push_b(stacks);
 	push_b(stacks);
-	ft_printf("%d", get_target_in_a(stacks, stacks->a->index));
+	ft_printf("%d", calc_to_cheap_send_b(stacks, stacks->a->index));
 }

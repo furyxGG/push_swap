@@ -18,4 +18,8 @@
 void	turk(t_stacks *stacks);
 int		get_target_in_b(t_stacks *stacks, int index);
 int		get_target_in_a(t_stacks *stacks, int index);
+int		get_pos(t_list *list, int index);
+int		calc_to_cheap_send_b(t_stacks *stacks, int index);
+int		calc_to_cheap_send_a(t_stacks *stacks, int index);
+
 #endif
