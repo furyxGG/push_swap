@@ -5,7 +5,9 @@ CFLAGS		=	-Wall -Werror -Wextra
 
 SRCS 		=	turk.c \
 				calc_cost.c \
-				helper.c
+				helper.c \
+				move_cheap.c \
+				rotate.c
 
 OBJS		=	$(SRCS:.c=.o)
 

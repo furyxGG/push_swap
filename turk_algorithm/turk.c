@@ -16,7 +16,10 @@ void	turk(t_stacks *stacks)
 {
 	push_b(stacks);
 	push_b(stacks);
-	push_b(stacks);
-	push_b(stacks);
-	ft_printf("%d", calc_to_cheap_send_b(stacks, stacks->a->index));
+	while (ft_lstsize(stacks->a) > 3)
+		move_cheap_to_b(stacks);
+	sort_three(stacks);
+	while (stacks->b)
+		move_cheap_to_a(stacks);
+	move_min_top(stacks);
 }

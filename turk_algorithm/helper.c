@@ -34,20 +34,23 @@ static int	no_any_small_b(t_stacks *stacks)
 	t_list *tmp;
 	int pos;
 	int big_index;
+	int target_pos;
 
-	pos = -1;
 	tmp = stacks->b;
+	pos = 0;
 	big_index = INT_MIN;
+	target_pos = 0;
 	while (tmp)
 	{
 		if (tmp->index > big_index)
 		{
 			big_index = tmp->index;
-			pos++;
+			target_pos = pos;
 		}
+		pos++;
 		tmp = tmp->next;
 	}
-	return (pos);
+	return (target_pos);
 }
 
 int	get_target_in_b(t_stacks *stacks, int index)
@@ -79,21 +82,24 @@ static int	no_any_big_a(t_stacks *stacks)
 {
 	t_list *tmp;
 	int pos;
-	int big_index;
+	int small_index;
+	int target_pos;
 
-	pos = -1;
 	tmp = stacks->a;
-	big_index = INT_MAX;
+	pos = 0;
+	small_index = INT_MAX;
+	target_pos = 0;
 	while (tmp)
 	{
-		if (tmp->index < big_index)
+		if (tmp->index < small_index)
 		{
-			big_index = tmp->index;
-			pos++;
+			small_index = tmp->index;
+			target_pos = pos;
 		}
+		pos++;
 		tmp = tmp->next;
 	}
-	return (pos);
+	return (target_pos);
 }
 
 int	get_target_in_a(t_stacks *stacks, int index)
