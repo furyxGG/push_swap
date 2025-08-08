@@ -31,14 +31,5 @@ int main(int argc, char **argv)
 	free(argums);
 	stacks = create_stacks(lists);
 	stack_index(stacks);
-
-	// t_list *curr = stacks->a;
-	// int d = 1;
-	// while (curr && d)
-	// {
-	// 	ft_printf("val: %d index: %d sira: %d\n", curr->val, curr->index, d);
-	// 	curr = curr->next;
-	// 	d++;
-	// }
 	sort(stacks);
 }
