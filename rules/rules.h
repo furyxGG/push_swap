@@ -16,6 +16,9 @@
 # include "../ft_printf/ft_printf.h"
 # include "../libft/libft.h"
 
+# define INT_MIN -2147483648
+# define INT_MAX 2147483647
+
 typedef struct s_stacks
 {
 	t_list	*a;

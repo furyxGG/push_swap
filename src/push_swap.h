@@ -16,6 +16,7 @@
 # include "../ft_printf/ft_printf.h"
 # include "../libft/libft.h"
 # include "../rules/rules.h"
+# include "../turk_algorithm/turk.h"
 
 int			check_for_words(char **lists);
 int			check_for_double(char **lists);
@@ -34,8 +35,5 @@ void        sort_four_five(t_stacks *stacks);
 void	    sort(t_stacks *stacks);
 
 void        move_min_top(t_stacks *stacks);
-
-int         calc_rot_cost(int pos, int size);
-
 
 #endif

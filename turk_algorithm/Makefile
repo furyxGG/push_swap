@@ -1,14 +1,11 @@
-NAME		=		push_swap.a
+NAME		=		turk.a
 
 CC			=		cc
 CFLAGS		=	-Wall -Werror -Wextra
 
-SRCS 		=	check_argums.c \
-				create_stacks.c \
-				index_stacks.c \
-				sort_small.c \
-				sort.c \
-				move.c
+SRCS 		=	turk.c \
+				calc_cost.c \
+				helper.c
 
 OBJS		=	$(SRCS:.c=.o)
 

@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calculate_cost.c                                   :+:      :+:    :+:   */
+/*   turk.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fyagbasa <fyagbasa@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/07 17:10:41 by fyagbasa          #+#    #+#             */
-/*   Updated: 2025/08/07 17:10:41 by fyagbasa         ###   ########.fr       */
+/*   Created: 2025/08/08 15:19:11 by fyagbasa          #+#    #+#             */
+/*   Updated: 2025/08/08 15:19:11 by fyagbasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef TURK_H
+# define TURK_H
 
-int	calc_rot_cost(int pos, int size)
-{
-	if (pos <= size / 2)
-		return (pos);
-	return (size - pos);
-}
+#include "../rules/rules.h"
 
+void	turk(t_stacks *stacks);
+int		get_target_in_b(t_stacks *stacks, int index);
+int		get_target_in_a(t_stacks *stacks, int index);
+#endif

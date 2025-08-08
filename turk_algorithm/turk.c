@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort.c                                             :+:      :+:    :+:   */
+/*   turk.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fyagbasa <fyagbasa@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/06 18:13:43 by fyagbasa          #+#    #+#             */
-/*   Updated: 2025/08/06 18:13:43 by fyagbasa         ###   ########.fr       */
+/*   Created: 2025/08/08 15:24:57 by fyagbasa          #+#    #+#             */
+/*   Updated: 2025/08/08 15:24:57 by fyagbasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "turk.h"
 
-void	sort(t_stacks *stacks)
+void	turk(t_stacks *stacks)
 {
-	int	size;
-
-	size = ft_lstsize(stacks->a);
-	if (size == 2)
-		sort_two(stacks);
-	else if (size == 3)
-		sort_three(stacks);
-	else if (size == 4 || size == 5)
-		sort_four_five(stacks);
-	else
-		turk(stacks);
+	push_b(stacks);
+	push_b(stacks);
+	push_b(stacks);
+	push_b(stacks);
+	ft_printf("%d", get_target_in_a(stacks, stacks->a->index));
 }
