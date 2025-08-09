@@ -6,7 +6,7 @@
 /*   By: fyagbasa <fyagbasa@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 05:02:06 by fyagbasa          #+#    #+#             */
-/*   Updated: 2025/08/05 17:17:11 by fyagbasa         ###   ########.fr       */
+/*   Updated: 2025/08/09 13:28:49 by fyagbasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	newstr = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 2));
 	if (!newstr)
 		return (0);
-	a = 0;	
+	a = 0;
 	b = 0;
 	while (s1[a])
 		newstr[b++] = s1[a++];
