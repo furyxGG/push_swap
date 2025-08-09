@@ -20,9 +20,9 @@ void	sort_two(t_stacks *stacks)
 
 void	sort_three(t_stacks *stacks)
 {
-	t_list	*tmp;
-	t_list	*tmp2;
-	t_list	*tmp3;
+	int	tmp;
+	int	tmp2;
+	int	tmp3;
 
 	tmp = stacks->a->index;
 	tmp2 = stacks->a->next->index;
