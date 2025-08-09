@@ -43,14 +43,17 @@ void	sort_three(t_stacks *stacks)
 
 void	sort_four_five(t_stacks *stacks)
 {
-	while (ft_lstsize(stacks->a) > 3)
+	if (!is_sorted(stacks))
 	{
-		move_min_top(stacks);
-		push_b(stacks);
-	}
-	sort_three(stacks);
-	while (ft_lstsize(stacks->b) > 0)
-	{
-		push_a(stacks);
+		while (ft_lstsize(stacks->a) > 3)
+		{
+			move_min_top(stacks);
+			push_b(stacks);
+		}
+		sort_three(stacks);
+		while (ft_lstsize(stacks->b) > 0)
+		{
+			push_a(stacks);
+		}
 	}
 }

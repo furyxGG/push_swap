@@ -27,5 +27,6 @@ int		calc_to_cheap_send_a(t_stacks *stacks, int index);
 void	rotate_tog_trk(t_stacks *stacks, int pos_a, int pos_b);
 void	move_cheap_to_b(t_stacks *stacks);
 void	move_cheap_to_a(t_stacks *stacks);
+int     is_sorted(t_stacks *stacks);
 
 #endif

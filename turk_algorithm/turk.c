@@ -12,8 +12,28 @@
 
 #include "turk.h"
 
+int	is_sorted(t_stacks *stacks)
+{
+	int		check;
+	t_list *tmp;
+
+	tmp = stacks->a;
+	check = 0;
+	while (tmp)
+	{
+		if (tmp->next && tmp->index > tmp->next->index)
+			check = 1;
+		tmp = tmp->next;
+	}
+	if (check != 0)
+		return (0);
+	return (1);
+}
+
 void	turk(t_stacks *stacks)
 {
+	if (is_sorted(stacks))
+		return ;
 	push_b(stacks);
 	push_b(stacks);
 	while (ft_lstsize(stacks->a) > 3)
