@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fyagbasa <fyagbasa@student.42istanbul.com  +#+  +:+       +#+        */
+/*   By: fyagbasa <fyagbasa@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 00:04:46 by fyagbasa          #+#    #+#             */
-/*   Updated: 2025/06/10 23:31:31 by fyagbasa         ###   ########.fr       */
+/*   Updated: 2025/08/09 12:44:20 by fyagbasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_atoi(const char *nptr)
+// atoi ama size_t li yani atol görevinde
+ssize_t	ft_atoi(const char *nptr)
 {
-	int	total;
-	int	sign;
+	size_t	total;
+	int		sign;
 
 	total = 0;
 	sign = 1;

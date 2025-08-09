@@ -78,9 +78,23 @@ int	check_for_plus(char **lists)
 	return (1);
 }
 
+int	check_for_int_values(char **lists)
+{
+	int	a;
+
+	a = 0;
+	while (lists[a])
+	{
+		if (ft_atoi(lists[a]) > INT_MAX || ft_atoi(lists[a]) < INT_MIN)
+			return (0);
+		a++;
+	}
+	return (1);
+}
+
 int	check_all(char **lists)
 {
-	if (check_for_words(lists) && check_for_double(lists) && check_for_plus(lists))
+	if (check_for_words(lists) && check_for_double(lists) && check_for_plus(lists) && check_for_int_values(lists))
 		return (1);
 	ft_printf("Error\n");
 	exit(0);

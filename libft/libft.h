@@ -6,7 +6,7 @@
 /*   By: fyagbasa <fyagbasa@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 02:54:36 by fyagbasa          #+#    #+#             */
-/*   Updated: 2025/08/08 18:36:34 by fyagbasa         ###   ########.fr       */
+/*   Updated: 2025/08/09 12:44:24 by fyagbasa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 size_t	ft_strlen(const char *s);
 int		ft_isdigit(int c);
 void	ft_bzero(void *s, size_t n);
-int		ft_atoi(const char *nptr);
+ssize_t	ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strjoin(char *s1, char *s2);
 char	**ft_split(char const *s, char c);
