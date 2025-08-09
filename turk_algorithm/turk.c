@@ -36,9 +36,10 @@ void	turk(t_stacks *stacks)
 		return ;
 	push_b(stacks);
 	push_b(stacks);
-	while (ft_lstsize(stacks->a) > 3)
+	while (ft_lstsize(stacks->a) > 3 && !is_sorted(stacks))
 		move_cheap_to_b(stacks);
-	sort_three(stacks);
+	if (ft_lstsize(stacks->a) == 3)
+		sort_three(stacks);
 	while (stacks->b)
 		move_cheap_to_a(stacks);
 	move_min_top(stacks);
