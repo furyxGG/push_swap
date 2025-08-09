@@ -6,7 +6,7 @@
 /*   By: fyagbasa <fyagbasa@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 18:09:13 by fyagbasa          #+#    #+#             */
-/*   Updated: 2025/08/06 18:09:13 by fyagbasa         ###   ########.fr       */
+/*   Updated: 2025/08/09 13:52:53 by fyagbasa         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,23 +21,27 @@ void	sort_two(t_stacks *stacks)
 void	sort_three(t_stacks *stacks)
 {
 	t_list	*tmp;
+	t_list	*tmp2;
+	t_list	*tmp3;
 
-	tmp = stacks->a;
-	if (tmp->next->index > tmp->next->next->index && tmp->next->next->index > tmp->index)
+	tmp = stacks->a->index;
+	tmp2 = stacks->a->next->index;
+	tmp3 = stacks->a->next->next->index;
+	if (tmp2 > tmp3 && tmp3 > tmp)
 	{
 		reverse_a(stacks, 1);
 		swap_a(stacks, 1);
 	}
-	else if (tmp->next->next->index > tmp->index && tmp->index > tmp->next->index)
+	else if (tmp3 > tmp && tmp > tmp2)
 		swap_a(stacks, 1);
-	else if (tmp->next->index > tmp->index && tmp->index > tmp->next->next->index)
+	else if (tmp2 > tmp && tmp > tmp3)
 		reverse_a(stacks, 1);
-	else if (tmp->index > tmp->next->index && tmp->next->index > tmp->next->next->index)
+	else if (tmp > tmp2 && tmp2 > tmp3)
 	{
 		rotate_a(stacks, 1);
 		swap_a(stacks, 1);
 	}
-	else if (tmp->index > tmp->next->next->index && tmp->next->next->index > tmp->next->index)
+	else if (tmp > tmp3 && tmp3 > tmp2)
 		rotate_a(stacks, 1);
 }
 

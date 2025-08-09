@@ -6,7 +6,7 @@
 /*   By: fyagbasa <fyagbasa@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 17:35:44 by fyagbasa          #+#    #+#             */
-/*   Updated: 2025/08/06 17:35:44 by fyagbasa         ###   ########.fr       */
+/*   Updated: 2025/08/09 13:43:25 by fyagbasa         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ int	check_for_words(char **lists)
 		b = 0;
 		while (lists[a][b])
 		{
-			if (ft_isdigit(lists[a][b]) == 0 || (lists[a][b] == '-' && lists[a][b + 1] == '\0') ||
-					(lists[a][b] == '+' && lists[a][b + 1] == '\0'))
+			if (ft_isdigit(lists[a][b]) == 0 ||
+			(lists[a][b] == '-' && lists[a][b + 1] == '\0') ||
+			(lists[a][b] == '+' && lists[a][b + 1] == '\0'))
 			{
 				return (0);
 			}
@@ -57,17 +58,20 @@ int	check_for_double(char **lists)
 
 int	check_for_plus(char **lists)
 {
-	int	a;
-	int	b;
+	int		a;
+	int		b;
+	char	**c;
 
 	a = 0;
+	c = lists;
 	while (lists[a])
 	{
 		b = 0;
-		while (lists[a][b])
+		while (c[a][b])
 		{
-			if ((lists[a][b] == '-' && (lists[a][b + 1] == '-' || lists[a][b + 1] == '+')) ||
-				(lists[a][b] == '+' && (lists[a][b + 1] == '-' || lists[a][b + 1] == '+')))
+			if ((c[a][b] == '-' && (c[a][b + 1] == '-'
+				|| c[a][b + 1] == '+')) || (c[a][b] == '+'
+				&& (c[a][b + 1] == '-' || c[a][b + 1] == '+')))
 			{
 				return (0);
 			}
@@ -94,7 +98,8 @@ int	check_for_int_values(char **lists)
 
 int	check_all(char **lists)
 {
-	if (check_for_words(lists) && check_for_double(lists) && check_for_plus(lists) && check_for_int_values(lists))
+	if (check_for_words(lists) && check_for_double(lists)
+		&& check_for_plus(lists) && check_for_int_values(lists))
 		return (1);
 	ft_printf("Error\n");
 	exit(0);

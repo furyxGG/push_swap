@@ -25,15 +25,15 @@ int			check_all(char **lists);
 
 t_stacks	*create_stacks(char **lists);
 
-void    	bubble_sort(int *arr, int size);
-int	    	*make_sort_arr(t_stacks *stacks, int size);
-void	    stack_index(t_stacks *stacks);
+void		bubble_sort(int *arr, int size);
+int			*make_sort_arr(t_stacks *stacks, int size);
+void		stack_index(t_stacks *stacks);
 
-void    	sort_two(t_stacks *stacks);
-void    	sort_three(t_stacks *stacks);
-void        sort_four_five(t_stacks *stacks);
-void	    sort(t_stacks *stacks);
+void		sort_two(t_stacks *stacks);
+void		sort_three(t_stacks *stacks);
+void		sort_four_five(t_stacks *stacks);
+void		sort(t_stacks *stacks);
 
-void        move_min_top(t_stacks *stacks);
+void		move_min_top(t_stacks *stacks);
 
 #endif

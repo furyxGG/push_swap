@@ -6,7 +6,7 @@
 /*   By: fyagbasa <fyagbasa@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 16:44:14 by fyagbasa          #+#    #+#             */
-/*   Updated: 2025/08/08 16:44:14 by fyagbasa         ###   ########.fr       */
+/*   Updated: 2025/08/09 13:56:24 by fyagbasa         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	get_pos(t_list *list, int index)
 {
-	int 	pos;
+	int		pos;
 	t_list	*tmp;
 
 	tmp = list;
@@ -31,10 +31,10 @@ int	get_pos(t_list *list, int index)
 
 static int	no_any_small_b(t_stacks *stacks)
 {
-	t_list *tmp;
-	int pos;
-	int big_index;
-	int target_pos;
+	t_list	*tmp;
+	int		pos;
+	int		big_index;
+	int		target_pos;
 
 	tmp = stacks->b;
 	pos = 0;
@@ -80,10 +80,10 @@ int	get_target_in_b(t_stacks *stacks, int index)
 
 static int	no_any_big_a(t_stacks *stacks)
 {
-	t_list *tmp;
-	int pos;
-	int small_index;
-	int target_pos;
+	t_list	*tmp;
+	int		pos;
+	int		small_index;
+	int		target_pos;
 
 	tmp = stacks->a;
 	pos = 0;

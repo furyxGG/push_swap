@@ -6,7 +6,7 @@
 /*   By: fyagbasa <fyagbasa@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 17:34:30 by fyagbasa          #+#    #+#             */
-/*   Updated: 2025/08/06 17:34:30 by fyagbasa         ###   ########.fr       */
+/*   Updated: 2025/08/09 13:34:20 by fyagbasa         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	nullast(t_list *stack)
 void	reverse_a(t_stacks *stacks, int w)
 {
 	t_list	*tmp;
-	
+
 	if (!stacks->a || !stacks->a->next)
 		return ;
 	tmp = ft_lstlast(stacks->a);
@@ -35,7 +35,7 @@ void	reverse_a(t_stacks *stacks, int w)
 void	reverse_b(t_stacks *stacks, int w)
 {
 	t_list	*tmp;
-	
+
 	if (!stacks->b || !stacks->b->next)
 		return ;
 	tmp = ft_lstlast(stacks->b);

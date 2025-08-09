@@ -6,7 +6,7 @@
 /*   By: fyagbasa <fyagbasa@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 15:24:57 by fyagbasa          #+#    #+#             */
-/*   Updated: 2025/08/08 15:24:57 by fyagbasa         ###   ########.fr       */
+/*   Updated: 2025/08/09 14:04:48 by fyagbasa         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	is_sorted(t_stacks *stacks)
 {
 	int		check;
-	t_list *tmp;
+	t_list	*tmp;
 
 	tmp = stacks->a;
 	check = 0;
