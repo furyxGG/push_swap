@@ -17,7 +17,9 @@ void	sort(t_stacks *stacks)
 	int	size;
 
 	size = ft_lstsize(stacks->a);
-	if (size == 2)
+	if (size == 1)
+		return ;
+	else if (size == 2)
 		sort_two(stacks);
 	else if (size == 3)
 		sort_three(stacks);
