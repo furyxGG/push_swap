@@ -6,7 +6,7 @@
 /*   By: fyagbasa <fyagbasa@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 17:35:44 by fyagbasa          #+#    #+#             */
-/*   Updated: 2025/08/09 13:43:25 by fyagbasa         ###   ########.tr       */
+/*   Updated: 2025/09/27 15:39:56 by fyagbasa         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,16 @@ int	check_for_int_values(char **lists)
 	{
 		if (ft_atoi(lists[a]) > INT_MAX || ft_atoi(lists[a]) < INT_MIN)
 			return (0);
+		if (ft_atoi(lists[a]) > 0)
+		{
+			if (ft_strlen(lists[a]) > 10)
+				return (0);
+		}
+		else if (ft_atoi(lists[a]) < 0)
+		{
+			if (ft_strlen(lists[a]) > 11)
+				return (0);
+		}
 		a++;
 	}
 	return (1);
@@ -100,9 +110,12 @@ int	check_for_int_values(char **lists)
 
 int	check_all(char **lists)
 {
-	if (check_for_words(lists) && check_for_double(lists)
-		&& check_for_plus(lists) && check_for_int_values(lists))
-		return (1);
+	if (lists[0] != NULL)
+	{
+		if (check_for_words(lists) && check_for_double(lists)
+			&& check_for_plus(lists) && check_for_int_values(lists))
+			return (1);
+	}
 	ft_printf("Error\n");
 	free_lists(lists);
 	exit(0);
